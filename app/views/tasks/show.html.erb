@@ -7,3 +7,9 @@
 <% else %>
 <h4>JUST DO IT!</h4>
 <% end %>
+
+
+<%= link_to "Edit #{@task.title}", edit_path(@task) %>
+<%= link_to "Delete #{@task.title}", task_path(id: @task.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Back to tasks", tasks_path %>
